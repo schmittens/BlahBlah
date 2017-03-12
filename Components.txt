@@ -1,0 +1,70 @@
+Components:
+
+SR
+- Plugin for different providers
+- Optional keyword support
+- Adjustable "sensitivity" (how long does the system listen until it decides the user entry is complete)
+
+- SR provider choser (or setting in JSON?)
+- SR execution (send microphone data, get string)
+- SR Verification? Send to multiple providers and compare? Is it possible to create some sort of confidence score?
+
+
+NLP
+- Domain choser (Noun phrase, to a lesser extent verb phrase)
+- Domain specific grammars
+- Domain specific stop lists, stemmers
+- General-purpose classes for tokenization, tagging, stemming, stopwords, synonyms with option to pass in domain specific information (if none is present, assume domain choser?)
+
+- "General" NLP for domain choser
+- More specific/customized NLP within domain, based on (JSON?) objects being passed into NLP class
+- Synonym based: If noun phrase/verb phrase combination is a synonym for action used in JSON, chose domain/execute command.  (crossover to Execution)
+-- domain choser: general list, pass domain (n-best?) to second NLP round
+-- domain specific: go to appropriate folder to get the instruction list, pass on to execution class
+--- JSON-based instruction sets (verb phrase, noun phrase, application/class, command, TTS phrase)
+
+
+Execution
+- Generalized, should work with any domain
+vs
+- Customized execution for domains/groups of domains
+
+- Is able to start (and stop) subprocesses/external apps
+- Knows what processes are connected/available and their state (which lights are on)
+
+
+TTS
+- Use predefined strings (see execution above) to give voice feedback 
+- Optional (depending on global setting, presence of TTS phrase and action type)
+- Plugin for different providers
+- Is there a local OSS TTS engine (to reduce lag/increase privacy)?
+
+- Upon successful execution: Domain/Action dependent (not necessary for some, e.g. "turn on the light")
+- Upon failed domain identification: General negative feedback (Did not understand)
+- Upon failed execution: Domain/Action dependent (No matching accessory found, ...)
+
+
+Testing
+- Built in python testing framework (Test driven development with python)
+- grouped by component
+
+
+
+
+
+Domains: 
+
+Separate apps or classes (inheriting from Execution)?
+
+System (diagnostics, "What is the keyword", "Are you there", ...)
+
+Lights
+- Slots: Action (on, off), Lamps (all, undetermined, specific), Rooms
+
+Notes
+- Slots: Title, text, start taking notes, stop taking notes
+
+Websearch
+- Slots: Provider (Google, Bing, Wikipedia, ...), search term, search option (image search, video search, web search...)
+
+Canned

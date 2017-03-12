@@ -1,0 +1,30 @@
+Decisions:
+(App vs.) embedded
+
+(Swift?) Python
+
+Scope:
+One or two domains to start with. 
+- Lights?
+- Notes?
+- Lookup?
+
+
+Python & NLTK for NLP
+
+
+Let's call it BlahBlah
+
+
+To Do CS:
+- Flowchart for Parse/NLP
+- SourceTree (Win?)
+- Note file into repo
+
+
+To Do Cat:
+- Swift/Python integration
+- GitLab project
+- Send NLP with Python
+
+

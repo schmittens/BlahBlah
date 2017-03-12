@@ -1,0 +1,51 @@
+
+
+using functions in lists:
+
+def func1():return 1
+def func2():return 2
+
+list = [func1, func2]
+
+or
+
+list = ['string',func1]
+
+or
+
+list = [
+	
+	('google', recognizer_google),
+	('ibm', recognizer_ibm)
+
+	]
+
+for item in list:
+	print(item[0])
+	item[1](audio)    <=== Does this work?
+
+
+Alternative: exec(object [globals, locals]) ?
+
+if object is string, it is parsed as a suite python statements and then executed
+if object is a code object, it is executed
+
+
+documenting classes/methods
+
+dir(class)?
+
+or
+
+for i in dir(class): print(i)
+
+
+
+Classmethods/decorators
+
+__dir__() for classes
+
+__xxx__() in general
+
+
+pickling for memory of past intents?
